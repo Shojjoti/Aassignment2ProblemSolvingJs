@@ -55,5 +55,23 @@ function calculateAiCost(tokenUsed){
 }
 
 //PROBLEM 4
+function topRatedRestaurant(restaurants) {
+    if (!Array.isArray(restaurants)|| restaurants.length === 0 ) {
+        return "Invalid";
+    }
 
+    let higRating = restaurants[0].rating;
+    let topResturant = restaurants[0].name;
+
+    for (let i = 1; i < restaurants.length; i++) {
+        if (restaurants[i].rating > higRating) {
+            higRating = restaurants[i].rating;
+            topResturant = restaurants[i].name;
+        }
+    }
+
+    return topResturant.toUpperCase();
+}
+
+//PROBLEM 5
 
