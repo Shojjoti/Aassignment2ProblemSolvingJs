@@ -35,5 +35,25 @@ function isElevatorSafe(weights) {
 }
 
 //PROBLEM 3
+function calculateAiCost(tokenUsed){
+    if(typeof tokenUsed !== 'number' || tokenUsed < 0 || isNaN(tokenUsed)) {
+        return "Invalid";
+    }
+
+    if(tokenUsed <= 500) {
+        return 0;
+    }
+    let extraTokens = tokenUsed - 500;
+    let totalCost = 0;
+    
+   while (extraTokens >= 100) {
+        totalCost = totalCost + 5;
+        extraTokens = extraTokens - 100;
+    }   
+
+    return totalCost;    
+}
+
+//PROBLEM 4
 
 
