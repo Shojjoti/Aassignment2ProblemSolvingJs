@@ -20,3 +20,20 @@ function matchWinner(teamAGoals, teamBGoals) {
 }
 
 //PROBLEM 2
+function isElevatorSafe(weights) {
+
+    if(!Array.isArray(weights)) {
+        return "Invalid";
+    }
+
+    let totalWeight = 0;
+    for(let i =0; i < weights.length; i++) {
+        totalWeight += weights[i];
+    }
+    return totalWeight <= 400;
+  
+}
+
+//PROBLEM 3
+
+
